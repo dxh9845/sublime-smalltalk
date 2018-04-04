@@ -25,7 +25,7 @@
 					</dict>
 					<dict>
 						<key>match</key>
-						<string>(([a-zA-Z][a-zA-Z0-9]*:)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:;^]+)\s*([a-zA-Z][a-zA-Z0-9]*)</string>
+						<string>(([a-zA-Z][a-zA-Z0-9]*:)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:^]+)\s*([a-zA-Z][a-zA-Z0-9]*)</string>
 						<key>captures</key>
 						<dict>
 							<key>1</key>
@@ -83,10 +83,8 @@
 		<dict>
 			<key>comment</key>
 			<dict>
-				<key>begin</key>
-				<string>;;</string>
-				<key>end</key>
-				<string></string>
+				<key>match</key>
+				<string>(?=\;).*$</string>
 				<key>name</key>
 				<string>comment.block</string>
 			</dict>
@@ -102,7 +100,7 @@
 			<key>symbol</key>
 			<dict>
 				<key>match</key>
-				<string>#(([a-zA-Z][a-zA-Z0-9:]*)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:;^]+)</string>
+				<string>#(([a-zA-Z][a-zA-Z0-9:]*)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:^]+)</string>
 				<key>name</key>
 				<string>constant.language</string>
 			</dict>
@@ -146,7 +144,7 @@
 			<key>selector</key>
 			<dict>
 				<key>match</key>
-				<string>([a-zA-Z][a-zA-Z0-9]*:)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:;^]+</string>
+				<string>([a-zA-Z][a-zA-Z0-9]*:)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:^]+</string>
 				<key>name</key>
 				<string>keyword.other</string>
 			</dict>
