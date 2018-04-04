@@ -91,7 +91,14 @@
 				<string>comment.block</string>
 			</dict>
 			<key>string</key>
-			
+			<dict>
+				<key>begin</key>
+				<string>'</string>
+				<key>end</key>
+				<string></string>
+				<key>name</key>
+				<string>string.quoted.double</string>
+			</dict>
 			<key>symbol</key>
 			<dict>
 				<key>match</key>
