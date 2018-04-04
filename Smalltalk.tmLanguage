@@ -5,6 +5,7 @@
 		<key>fileTypes</key>
 		<array>
 			<string>st</string>
+			<string>smt</string>
 		</array>
 
 		<key>name</key>
@@ -33,6 +34,7 @@
 								<key>name</key>
 								<string>entity.name.function</string>
 							</dict>
+
 							<key>3</key>
 							<dict>
 								<key>name</key>
@@ -81,6 +83,13 @@
 		</array>
 		<key>repository</key>
 		<dict>
+			<key>class</key>
+			<dict>
+				<key>match</key>
+				<string>class\s</string>
+				<key>name</key>
+				<string>entity.name.class</string>
+			</dict>
 			<key>comment</key>
 			<dict>
 				<key>match</key>
@@ -127,6 +136,13 @@
 				<key>name</key>
 				<string>constant.numeric</string>
 			</dict>
+			<key>self</key>
+			<dict>
+				<key>match</key>
+				<string>self</string>
+				<key>name</key>
+				<string>variable.language</string>
+			</dict>
 			<key>special-variable</key>
 			<dict>
 				<key>match</key>
@@ -141,10 +157,17 @@
 				<key>name</key>
 				<string>variable.other</string>
 			</dict>
+			<key>methodname</key>
+			<dict>
+				<key>match</key>
+				<string>([a-zA-Z][a-zA-Z0-9]*:|[a-zA-Z][a-zA-Z0-9]*\s(?=\(*\)))</string>
+				<key>name</key>
+				<string></string>
+			</dict>
 			<key>selector</key>
 			<dict>
 				<key>match</key>
-				<string>([a-zA-Z][a-zA-Z0-9]*:)|[+\-\/\\*~&lt;&gt;=@%|&amp;?!.,:^]+</string>
+				<string>method|class-method|instance-method</string>
 				<key>name</key>
 				<string>keyword.other</string>
 			</dict>
@@ -158,7 +181,15 @@
 					</dict>
 					<dict>
 						<key>include</key>
+						<string>#class</string>
+					</dict>
+					<dict>
+						<key>include</key>
 						<string>#special-variable</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#methodname</string>
 					</dict>
 					<dict>
 						<key>include</key>
@@ -167,6 +198,10 @@
 					<dict>
 						<key>include</key>
 						<string>#number</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#self</string>
 					</dict>
 					<dict>
 						<key>include</key>
@@ -179,6 +214,10 @@
 					<dict>
 						<key>include</key>
 						<string>#string</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#selector</string>
 					</dict>
 				</array>
 			</dict>
